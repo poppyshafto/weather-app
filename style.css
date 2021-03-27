@@ -1,0 +1,105 @@
+body {
+  font-family: "Poppins", sans-serif;
+  text-shadow: 1px 1px 10px #fff;
+  color: #034661;
+  margin-top: 20px;
+}
+
+form {
+  font-size: small;
+}
+
+#city-input {
+  font-weight: 900;
+}
+
+input {
+  border-radius: 5px;
+  border: 1 solid silver;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 80px;
+  margin: 0;
+  padding: 10px;
+}
+
+h2 {
+  margin: 0;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 5px;
+  text-align: left;
+}
+
+footer {
+  font-family: "Courier New", Courier, monospace;
+  color: #fff;
+  padding: 20px 0 10px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.card {
+  background-image: url(abstractclouds.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  border: none;
+}
+
+.weather-breakdown {
+  margin: 10px 0 15px;
+}
+
+#forecast-container {
+  text-align: center;
+  background: rgb(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 20px;
+  font-weight: bolder;
+}
+
+.day,
+.temp {
+  font-size: 12px;
+}
+
+.symbol {
+  font-size: 30px;
+}
+
+.main-weather {
+  color: #fff;
+  font-size: 60px;
+}
+
+sup {
+  font-size: 20px;
+  position: relative;
+  top: -35px;
+}
+
+#hero-temp-number {
+  font-size: 70px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: pink;
+}
+
+.high-low-div,
+.low {
+  font-weight: 100;
+}
