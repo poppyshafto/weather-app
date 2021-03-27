@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <script
+      src="https://kit.fontawesome.com/bee2923613.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="total-container">
+      <div class="card">
+        <div class="card-body container-class">
+          <div class="container main-weather">
+            <div class="row">
+              <form id="city-search-form">
+                <input
+                  type="text"
+                  placeholder="Enter city 🌎"
+                  class="city-search"
+                  id="city-search"
+                />
+                <input type="submit" value="Go!" id="city-input" />
+                <button id="user-location">Current Location</button>
+              </form>
+            </div>
+            <div class="row">
+              <div class="col">
+                <span><i class="far fa-sun top"></i></span>
+                <span class="hero-temp-number" id="hero-temp-number">26</span>
+                <span class="degrees">
+                  <a href="#"
+                    ><sup id="hero-temp-cel" class="active">°C</sup></a
+                  >
+                  <sup id="hero-temp-divider">/</sup>
+                  <a href="#"><sup id="hero-temp-far">°F</sup></a>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <h1 id="city">CAPE TOWN</h1>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <h2 id="current-time"></h2>
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col weather-breakdown">
+                <ul class="weather-stats">
+                  <li class="li description" id="description">description</li>
+                  <li class="li humidity" id="humidity">Humidity</li>
+                  <li class="li wind-speed" id="wind-speed">Wind Speed</li>
+                  <li class="li instruction" id="instruction"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="container" id="forecast-container">
+            <div class="row">
+              <div class="col-2 day">12:00</div>
+              <div class="col-2 day">14:00</div>
+              <div class="col-2 day">16:00</div>
+              <div class="col-2 day">18:00</div>
+              <div class="col-2 day">20:00</div>
+              <div class="col-2 day">22:00</div>
+            </div>
+
+            <div class="row">
+              <div class="col-2 symbol" class="symbol">
+                <i class="far fa-sun"></i>
+              </div>
+              <div class="col-2 symbol">
+                <i class="fas fa-wind"></i>
+              </div>
+              <div class="col-2 symbol">
+                <i class="fas fa-wind"></i>
+              </div>
+              <div class="col-2 symbol">
+                <i class="far fa-sun"></i>
+              </div>
+              <div class="col-2 symbol">
+                <i class="fas fa-cloud-sun"></i>
+              </div>
+              <div class="col-2 symbol">
+                <i class="far fa-sun"></i>
+              </div>
+            </div>
+
+            <div class="row high-temp-row">
+              <div class="col-2 temp">
+                <span class="high">High</span>
+                <span class="high-temp" id="high-temp">24°</span>
+              </div>
+              <div class="col-2 temp">
+                <span class="high">High</span>
+                <span class="high-temp" id="high-temp">24°</span>
+              </div>
+              <div class="col-2 temp">
+                <span class="high">High</span>
+                <span class="high-temp" id="high-temp">24°</span>
+              </div>
+              <div class="col-2 temp">
+                <span class="high">High</span>
+                <span class="high-temp" id="high-temp">24°</span>
+              </div>
+              <div class="col-2 temp">
+                <span class="high">High</span>
+                <span class="high-temp" id="high-temp">24°</span>
+              </div>
+              <div class="col-2 temp">
+                <span class="high">High</span>
+                <span class="high-temp" id="high-temp">24°</span>
+              </div>
+            </div>
+
+            <div class="row low-temp-row">
+              <div class="col-2 temp">
+                <span class="low">Low</span>
+                <span class="low-temp" id="low-temp">18°</span>
+              </div>
+              <div class="col-2 temp">
+                <span class="low">Low</span>
+                <span class="low-temp" id="low-temp">18°</span>
+              </div>
+              <div class="col-2 temp">
+                <span class="low">Low</span>
+                <span class="low-temp" id="low-temp">18°</span>
+              </div>
+              <div class="col-2 temp">
+                <span class="low">Low</span>
+                <span class="low-temp" id="low-temp">18°</span>
+              </div>
+              <div class="col-2 temp">
+                <span class="low">Low</span>
+                <span class="low-temp" id="low-temp">18°</span>
+              </div>
+              <div class="col-2 temp">
+                <span class="low">Low</span>
+                <span class="low-temp" id="low-temp">18°</span>
+              </div>
+            </div>
+          </div>
+          <footer>
+            👩🏼‍💻 Coded & designed by
+            <a href="mailto:poppyshafto@gmail.com?" class="mailto">
+              Poppy Shafto</a
+            >
+          </footer>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
